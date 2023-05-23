@@ -1,8 +1,14 @@
-<h1><%= @task.title %></h1>
+<div class="container">
+  <h1><%= @task.title %></h1>
 
-<p><%= @task.details %></p>
-<p>Completed?<%= @task.completed %></p>
+  <p><%= @task.details %></p>
+</div>
 
-<%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"} %>
-<%= link_to "Index", tasks_path %>
-<%= link_to "Edit", task_edit_path(@task) %>
+
+<div class="container" >
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+  <button type="button" class="btn btn-outline-primary"><%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"} %></button>
+  <button type="button" class="btn btn-outline-primary"><%= link_to "Index", tasks_path %></button>
+  <button type="button" class="btn btn-outline-primary"><%= link_to "Edit", task_edit_path(@task) %></button>
+</div>
+</div>
