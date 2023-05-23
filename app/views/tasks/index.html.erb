@@ -5,3 +5,5 @@
   <li><%= link_to task.title, task_path(task) %><strong> Completed? <%= task.completed %></strong> </li>
 <% end %>
 </ul>
+
+<%= link_to "Add new task", tasks_new_path %>
